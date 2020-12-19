@@ -1,5 +1,98 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --bg: #000;
+  --bg-frame: #4b615c;
+  --bg-reactor: #96cfcb;
+  --bg-triangle : #016c97;
+  --bg-core : #fff7f1;
+  --bg-core-inside : #2a7b88;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--bg);
+}
+
+.frame {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  background-color: var(--bg-frame);
+}
+
+.reactor {
+  background-color: var(--bg-reactor);
+  width: 16rem;
+  height: 16rem;
+  border-radius: 50%;
+  position: relative;
+  top: 2rem;
+  margin: 0 auto;
+}
+
+.support-trapezoid {
+  width: 10rem;
+  height: 6rem;
+  background-color: var(--bg-frame);
+  clip-path: polygon(
+    0 0,
+    15% 100%,
+    85% 100%,
+    100% 0,
+    80% 0,
+    65% 75%,
+    35% 75%,
+    20% 0
+  );
+  margin: 0 auto;
+}
+
+.support-trapezoid:nth-of-type(2) {
+    transform: rotate(240deg);
+    position: absolute;
+    top: 8rem;
+    left: -1.5rem;
+}
+.support-trapezoid:nth-of-type(3) {
+    transform: rotate(117deg);
+    position: relative;
+    left: 5rem;
+    top: 1.6rem;
+}
+
+.triangle {
+    clip-path: polygon(0 0, 50% 100%, 100% 0);
+    width: 12rem;
+    height: 10rem;
+    background-color: var(--bg-triangle);
+    margin: 0 auto;
+    position: relative;
+    top: -7.1rem;
+}
+
+.core {
+    clip-path: polygon(0 0, 50% 100%, 100% 0);
+    width: 6rem;
+    height: 5rem;
+    background-color: var(--bg-core);
+    margin: 0 auto;
+    position: relative;
+    bottom: -1.5rem;
+}
+
+.core-inside {
+    clip-path: polygon(0 0, 50% 100%, 100% 0);
+    width: 3.5rem;
+    height: 3rem;
+    background-color: var(--bg-core-inside);
+    margin: 0 auto;
+    position: relative;
+    bottom: -0.6rem;
 }
