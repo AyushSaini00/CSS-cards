@@ -12,7 +12,6 @@
   --bg-core-inside: #2a7b88;
   --light: #49fae6;
 }
-
 body {
   display: flex;
   align-items: center;
@@ -20,15 +19,15 @@ body {
   min-height: 100vh;
   background-color: var(--bg);
 }
-
 .frame {
   width: 20rem;
   height: 20rem;
   border-radius: 50%;
   background-color: var(--bg-frame);
   box-shadow: 0 0 7px 2.5px #96cfcb;
+  border: 0.1px solid #00b7ff;
+  animation: animationBoxShadow 1.5s ease-in-out infinite;
 }
-
 .reactor {
   background-color: var(--bg-reactor);
   width: 16rem;
@@ -39,8 +38,8 @@ body {
   margin: 0 auto;
   box-shadow: inset 0px 0px 7px 6px rgba(0, 0, 0, 0.75);
   border: 1px solid black;
+  animation: animation 1.5s ease-in-out infinite;
 }
-
 .support-trapezoid {
   width: 10rem;
   height: 6rem;
@@ -57,7 +56,6 @@ body {
   );
   margin: 0 auto;
 }
-
 .support-trapezoid:nth-of-type(2) {
   transform: rotate(240deg);
   position: absolute;
@@ -70,7 +68,6 @@ body {
   left: 5rem;
   top: 1.6rem;
 }
-
 .triangle {
   clip-path: polygon(0 0, 50% 100%, 100% 0);
   width: 12rem;
@@ -80,7 +77,6 @@ body {
   position: relative;
   top: -7.1rem;
 }
-
 .core {
   clip-path: polygon(0 0, 50% 100%, 100% 0);
   width: 6rem;
@@ -89,9 +85,7 @@ body {
   margin: 0 auto;
   position: relative;
   bottom: -1.5rem;
-  /* animation: coreAnimate 1.5s ease-in-out infinite alternate; */
 }
-
 .core-inside {
   clip-path: polygon(0 0, 50% 100%, 100% 0);
   width: 3.5rem;
@@ -100,4 +94,48 @@ body {
   margin: 0 auto;
   position: relative;
   bottom: -0.6rem;
+}
+.groove {
+  position: relative;
+  background-color: #30443f;
+  border-radius: 20%;
+}
+.groove-1 {
+  width: 65px;
+  height: 16px;
+  left: 5.8rem;
+  top: -23.6rem;
+}
+.groove-2{
+  width: 16px;
+  height: 60px;
+  top: -12.5rem;
+  left: -0.2rem;
+  transform: rotate(-30deg);
+}
+.groove-3{
+  width: 16px;
+  height: 60px;
+  left: 15.3rem;
+  top: -16.5rem;
+  transform: rotate(30deg);
+}
+
+/*Keyframe animations*/
+@keyframes animation {
+  0% {
+    background-color: white;
+  }
+  100% {
+      background-color: var(--light);
+  }
+}
+@keyframes animationBoxShadow {
+  0% {
+    box-shadow: 0 0 20px 16.5px #96cfcb;
+  }
+  100% {
+      box-shadow: 0 0 10px 2.5px #00b7ff;
+  }
+
 }
