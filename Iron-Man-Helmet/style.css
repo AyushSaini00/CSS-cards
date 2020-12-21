@@ -23,3 +23,65 @@ body {
     background: var(--bg);
     overflow: hidden;
 }
+
+.helmet-1,
+.helmet-2 {
+    background: var(--bg-helmet);
+    width: 15vmin;
+    height: 25vmin;
+    top: -40vmin;
+}
+.helmet-1 {
+    transform: skew(-15deg);
+    left: 30vmin;
+}
+.helmet-2 {
+    transform: skew(15deg);
+    left: -40vmin;
+}
+
+.helmet-1::before,
+.helmet-2::before {
+    background: var(--bg-helmet);
+    width: 15vmin;
+    height: 5vmin;
+    border-radius: 0% 100% 0% 0% / 0% 55% 45% 0% ;
+    top: -4vmin;
+}
+.helmet-2::before {
+    transform: scaleX(-1); /*to flip shape*/
+}
+
+.helmet-1::after,
+.helmet-2::after {
+    background: var(--bg-helmet);
+    width: 15vmin;
+    height: 5vmin;
+    clip-path: polygon(0 0, 0% 100%, 100% 0);
+    top: 24vmin;
+}
+.helmet-2::after {
+    transform: scaleX(-1); 
+}
+
+.helmet-3,
+.helmet-4 {
+    background: var(--bg-helmet);
+    width: 6vmin;
+    height: 40vmin;
+    clip-path: polygon(0 7%, 100% 0%, 100% 100%, 0% 100%);
+    top: 32vmin;
+}
+.helmet-3{
+    left: 0vmin;
+}
+.helmet-4 {
+    transform: scaleX(-1);
+    left: -11vmin;
+}
+
+.helmet-3::before {
+    background: var(--bg-helmet);
+    width: 8vmin;
+    height: 5vmin;
+}
